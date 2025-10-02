@@ -20,9 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create new list item
         const listItem = document.createElement('li');
         
-        // Create span for task text
-        const taskSpan = document.createElement('span');
-        taskSpan.textContent = taskText;
+        // Set textContent to taskText (as per instructions)
+        listItem.textContent = taskText;
         
         // Create remove button
         const removeButton = document.createElement('button');
@@ -34,11 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
             taskList.removeChild(listItem);
         };
         
-        // Append task text and remove button to list item
-        listItem.appendChild(taskSpan);
+        // Append remove button to the li element
         listItem.appendChild(removeButton);
         
-        // Append list item to task list
+        // Append the li to taskList
         taskList.appendChild(listItem);
         
         // Clear the task input field
